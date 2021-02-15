@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+#navbar {
+    display: grid;
+    grid-template-columns: 1fr 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    ". gmail atteli menu ieiet";
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#gmail {
+    grid-area: gmail;
+    justify-self: center;
+    align-self: center;
+}
+#atteli{
+    grid-area: atteli;
+    justify-self: center;
+    align-self: center;
+}
+#menu{
+    grid-area: menu;
+    justify-self: center;
+    align-self: center;
+}
+#ieiet{
+    grid-area: ieiet;
+    justify-self: center;
+    align-self: center;
+}
