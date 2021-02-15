@@ -2,7 +2,7 @@ html {
     height: 100%;
     min-height: 100%;
 }
-
+/* Navbar */
 #navbar {
     display: grid;
     grid-template-columns: 1fr 50px 50px 50px;
@@ -32,13 +32,32 @@ a {
     grid-area: menu;
     justify-self: center;
     align-self: center;
+
 }
 #ieiet{
     grid-area: ieiet;
     justify-self: center;
     align-self: center;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    letter-spacing: .25px;
+    line-height: 16px;
+    margin-left: 10px;
+    margin-right: 8px;
+    min-width: 96px;
+    padding: 9px 23px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
+/* Vidus */
 #main {
     min-height: 100%;
     display: grid;
@@ -59,7 +78,15 @@ a {
 #search {
     grid-area: search;
     height: 30px;
+    width: 80%;
+    justify-self: center;
     align-self: center;
+    border: 1px solid rgb(172, 167, 167);
+    border-radius: 30px;
+}
+#search:hover {
+    box-shadow: 1px 1px 5px grey;
+
 }
 #flexbox {
     display: flexbox;
@@ -68,10 +95,86 @@ a {
     align-self: center;
 }
 #google-meklesana-poga {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
 #veiksme {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
 #valodas {
     grid-area: valodas;
     justify-self: center;
+}
+
+/* Footer */
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 100px 120px 150px 1fr 120px 100px 100px;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "info reklamesana uznemejdarbiba meklesanas . konfidencialitate noteikumi iestatijumi";
+}
+#info {
+    grid-area: info;
+    justify-self:center;
+    align-self:center
+}
+#reklamesana {
+    grid-area: reklamesana;
+    justify-self:center;
+    align-self:center
+}
+#uznemejdarbiba {
+    grid-area: uznemejdarbiba;
+    justify-self:center;
+    align-self:center
+}
+#meklesanas {
+    grid-area: meklesanas;
+    justify-self:center;
+    align-self:center
+}
+#konfidencialitate {
+    grid-area: konfidencialitate;
+    justify-self:center;
+    align-self:center
+}
+#noteikumi {
+    grid-area: noteikumi;
+    justify-self:center;
+    align-self:center
+}
+#iestatijumi {
+    grid-area: iestatijumi;
+    justify-self:center;
+    align-self:center
 }
