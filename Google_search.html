@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        ieiet {
+            overflow: visible;
+            position: absolute;
+            top: 0px; visibility: visible;
+            width: 328px; z-index: 991;
+            margin-top: 25px;
+            right: 0px; margin-right: 20px;
+            transition: height 0.3s ease-in-out 0s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        ieiet button {
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 8px;
+            background: #1a73e8;
+            border: 1px solid transparent;
+            font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: .25px;
+            line-height: 16px;
+            margin-right: 8px;
+            min-width: 96px;
+            padding: 9px 23px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+            display: inline-block;
+        }
+        ieiet img {
+            width: 35px;
+            padding: 6px;
+            margin: auto 7px;
+            cursor: pointer;
+        }
+        ieiet img:hover {
+            opacity: .8;
+        }
+        .s-box {
+            width: 700px;
+            margin: 0px auto;
+            position: relative;
+            margin-top: -40px;
+            text-align: center;
+            margin-left: 160px;
+        }
+        .s-box .s-input {
+            display: block;
+            border: 1px solid #ddd;
+            color: rgba(0,0,0, 0.87);
+            font-size: 16px;
+            padding: 13px;
+            padding-left: 25px;
+            padding-right: 40px;
+            border-radius: 25px;
+            width: 100%;
+            transition: box-shadow 100ms;
+            outline: none;
+        }
+        .s-box  .s-input:hover {
+            border: 1px solid #fff;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.05), 
+                        0 0 2px rgba(0, 0, 0, 0.05),
+                        0 0 3px rgba(0, 0, 0, 0.05),
+                        0 0 4px rgba(0, 0, 0, 0.05), 
+                        0 0 5px rgba(0, 0, 0, 0.05), 
+                        0 0 4px rgba(0, 0, 0, 0.05), 
+                        0 0 5px rgba(0, 0, 0, 0.05)
+        }
+        .s-box .search-icon {
+            width: 20px;
+            opacity: .4;
+            position: absolute;
+            top: 13px;
+            right: 14px;
+        }
+        .logo {
+            height: 33px;
+            aspect-ratio: auto 92 / 33;
+            width: 92px;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-top-style: solid;
+            border-right-style: solid;
+            border-bottom-style: solid;
+            border-left-style: solid;
+            margin-top: 25px;
+            margin-left: 25px;
+            
+            }
+        teksts {
+            margin-left: 180px;
+        }
+        teksts a {
+            color: #5f6368;
+            padding: 16px 12px 12px 10px;
+            font-size: 13px;     
+            }
+        teksts2 {
+            margin-left: 200px;
+            }
+        nav2{
+            height: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ebebeb;
+            }
+        dala {
+            width: 625px; z-index: 1105;
+            font-size: medium;
+            font-weight: normal;
+            border: 0;
+            margin: 0;
+            margin-top: -2px;
+            margin-left: 180px;
+        }
+        min {
+            border-spacing: 2px;
+            width: 614px; z-index: 280;
+            padding: 26px;
+            margin-top: 2px;
+            padding-bottom: 40px;
+            padding-top: 10px;
+            display: block;
+        }
+        .minvirsraksts {
+            font-size: 20px;
+            color: #1a0dab;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 15;
+        }
+        .minteksts {
+            overflow: hidden;
+            width: 220px;
+            color: #4d5156;
+            line-height: 1.58;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+
+        }
+        .daudzums {
+            font-size: 14px;
+            color: #70757a;
+            margin-bottom: 10px;
+        }
+        .weblinki {
+            font-size: 14px;
+            line-height: 1.3;
+            padding-top: 1px;
+            margin-bottom: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .virsraksti {
+            color: #1a0dab;
+            font-size: 22px;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+        .apaksteksti {
+            font-size: 14px;
+            color: #4d5156;
+            line-height: 1.8;
+        }
+        lapas {
+            margin-left: 250px;
+            margin-bottom: 30px;
+            margin-top: 50px;
+            display: block;
+            font-weight: normal;
+            cursor: pointer;
+            
+        }
+        lapas c {
+            color: #4285f4;
+            padding-left: 5px;
+        }
+        lapas c:hover{
+            text-decoration: underline;
+        }
+
+         footer {
+            background: #f2f2f2;
+        }
+        footer h4 {
+            color: rgba(0,0,0, 0.54);
+            font-size: 15px;
+            line-height: 40px;
+            font-weight: 400;
+            padding-left: 30px;
+            border: 1px solid #eee;
+        }
+        footer a {
+            color: #5f6368;
+            display: inline-block;
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .links {
+            border-top: 1px solid #ddd;
+            display: flex;
+        }
+        .link1 {
+            padding-left: 20px;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+    </style>
+    <head>
+        <title>rvt - Google meklēšana</title>
+        <link rel="icon" href="attēli/icon.png">
+    </head>
+    <body>
+        <nav>
+            <ieiet> 
+                <img src="attēli/menu.png">
+                <button>Ieiet</button>
+            </ieiet>
+            <div> 
+                <img class="logo" src="attēli/Google_logo.png"> 
+            </div>
+                 <div class="s-box">
+                    <img src="attēli/search.svg" class="search-icon">
+                    <input type="text" class="s-input" value="rvt"> 
+                </div>
+        </nav>
+        <nav2>
+            <teksts>
+                <a href="#">Viss</a>
+                <a href="#">Attēli</a>
+                <a href="#">Maps</a>
+                <a href="#">Video</a>
+                <a href="#">Ziņas</a>
+                <a href="#">Vēl</a>
+                <teksts2>
+                    <a href="#">Iestatījumi</a>
+                    <a href="#">Rīki</a>
+                </teksts2>
+            </teksts>
+        </nav2>
+        <dala>
+            <div class="daudzums">
+                <div>Aptuveni 8 950 000 rezultāti<nobr> (0,60 sekundes)&nbsp;</nobr></div>
+            </div>
+        </dala>
+        <dala>
+            <div>
+                <div class="weblinki">
+                    <site>https://www.rvt.lv</site>
+                </div>
+                <div class="virsraksti">
+                    <span>Rīgas Valsts tehnikums</span>
+                </div>
+                <div class="apaksteksti">
+                    <span>Arī PIKC “<em>Rīgas Valsts tehnikums</em>” Dzelzceļa nodaļa sadarbībā ar ... Raksti uz solveiga.keistere@<em>rvt</em>.lv, lai pieteiktu savu klasi vai skolu uz tiešsaistes karjeras&nbsp;...</span>
+                </div>    
+            </div>
+        <min>
+            <div class="minvirsraksts">
+                <span>Stundu saraksts</span>
+            </div>
+            <div class="minteksts">
+                <span>RVT 100 gadi. LATVIJAS DZELCEĻŠ. LDZ. Sociālie tīkli ...</span>
+            </div>
+            <div class="minvirsraksts">
+                <span>Kontakti</span>
+            </div>
+            <div class="minteksts">
+                <span>Direktore Dagnija Vanaga Telefons 67324146 dagnija ...</span>
+            </div>
+            <div class="minvirsraksts">
+                <span>Uzņemšana</span>
+            </div>
+            <div class="minteksts">
+                <span>RVT 100 gadi. LATVIJAS DZELCEĻŠ. LDZ. Sociālie tīkli ...</span>
+            </div>
+            <div class="minvirsraksts">
+                    <span>Profesijas</span>
+                </div>
+                <div class="minteksts">
+                    <span>RVT 100 gadi. Sociālie tīkli. PIKC RVT | TV ... Bibliotēka ...</span>
+                </div>       
+        </min>
+            <div>
+                <div>
+                    <div class="weblinki">
+                        <site>https://www.facebook.com </site>
+                    </div>
+                    <div class="virsraksti">
+                        <span>Rīgas Valsts tehnikums - Home | Facebook</span>
+                    </div>
+                    <div class="apaksteksti">
+                        <span>... RAIL 2021 HOP ON. May be an image of text that says 'FUTURE VET-teacher' · See All. Videos. Uzņemšana PIKC RVT Krāslavas teritoriālajā struktūrvienībā.</span>
+                    </div>   
+                <div class="weblinki">
+                    <site>https://www.rvt-riepas.lv</site>
+                </div>
+                <div class="virsraksti">
+                    <span>RVT</span>
+                </div>
+                <div class="apaksteksti">
+                    <span>riepu centrs “RVT”. Ziepniekkalna iela 23a, Rīga, Latvija, LV-1004. +37129 273 705. Copyrights ® sia RVT 2021. Mājas lapas izstrāde Amparo Mājas lapas ...</span>
+                </div>    
+            </div>
+            <div>
+                <div class="weblinki">
+                    <site>https://www.prakse.lv </site>
+                </div>
+                <div class="virsraksti">
+                    <span>Rīgas Valsts tehnikums - Prakse</span>
+                </div>
+                <div class="apaksteksti">
+                    <span>RVT realizē profesionālās vidējās izglītības programmas, kas dod iespēju iegūt trešo profesionālās kvalifikācijas līmeni, un papildus veic reģionālā vai nozares ...</span>
+                </div>    
+            </div>
+            <div>
+                <div class="weblinki">
+                    <site>https://lv.wikipedia.org </site>
+                </div>
+                <div class="virsraksti">
+                    <span>Rīgas Valsts tehnikums — Vikipēdija</span>
+                </div>
+                <div class="apaksteksti">
+                    <span>Rīgas Valsts tehnikums, saīsinājumā RVT, ir mācību iestāde Rīgā. Šī mācību iestāde dibināta 1919. gada 29. decembrī. Rīgas Valsts tehnikumā var iegūt ...</span>
+                </div>    
+            </div>
+            <div>
+                <div class="weblinki">
+                    <site>https://company.lursoft.lv</site>
+                </div>
+                <div class="virsraksti">
+                    <span>RVT, Sabiedrība ar ierobežotu atbildību, 40003334092 - par ...</span>
+                </div>
+                <div class="apaksteksti">
+                    <span>RVT, Sabiedrība ar ierobežotu atbildību (SIA), 40003334092, Rīga, Zemes iela 11 - 84, LV-1082. Viss par uzņēmumu no valsts un nevalstiskajiem reģistriem.</span>
+                </div>    
+            </div>
+            <div>
+                <div class="weblinki">
+                    <site>https://twitter.com</site>
+                </div>
+                <div class="virsraksti">
+                    <span>PIKC RVT (@rvt_lv) | Twitter</span>
+                </div>
+                <div class="apaksteksti">
+                    <span>The latest Tweets from PIKC RVT (@rvt_lv). Rīgas Valsts Tehnikums. Riga, Latvia.</span>
+                </div>    
+            </div>
+            <div>
+                <div class="weblinki">
+                    <site>https://company.lursoft.lv</site>
+                </div>
+                <div class="virsraksti">
+                    <span>RVT, Sabiedrība ar ierobežotu atbildību, 40003334092 - par ...</span>
+                </div>
+                <div class="apaksteksti">
+                    <span>RVT, Sabiedrība ar ierobežotu atbildību (SIA), 40003334092, Rīga, Zemes iela 11 - 84, LV-1082. Viss par uzņēmumu no valsts un nevalstiskajiem reģistriem.</span>
+                </div>    
+            </div>
+            <lapas>
+                <c href="#">1</c>
+                <c href="#">2</c>
+                <c href="#">3</c>
+                <c href="#">4</c>
+                <c href="#">5</c>
+                <c href="#">6</c>
+                <c href="#">7</c>
+                <c href="#">8</c>
+                <c href="#">9</c>
+                <c href="#">10</c>
+                <c href="#">nākamā</c>
+            </lapas>
+        </dala>
+        <footer>
+            <h4>Latvija</h4>
+            <div class="links">
+                <div class="link1">
+                    <a href="#">Palīdzība</a>
+                    <a href="#">Sūtīt atsauksmes</a>
+                    <a href="#">Konfidencialitāte</a>
+                    <a href="#">Noteikumi</a>
+                </div>
+            </div>
+        </footer> 
+        </body>
+    <footer>
+    </footer>
+</html>
